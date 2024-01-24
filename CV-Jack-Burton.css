@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(187, 147, 37);
+    color: rgb(243, 213, 167);
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-style: oblique;
+    border-bottom: 2px solid rgb(121, 89, 41);
+    font-weight: lighter;
+}
+h2 {
+    text-align: center;
+}
+
+.Personal {
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(243, 213, 167);
+    color: rgb(0, 0, 0);
+}
+
+article {
+    display: grid;
+    grid-template:
+        "a b"
+        "c d" / auto 1fr;
+    gap: 20px;
+    border-bottom: 2px solid rgb(83, 54, 10);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article div {
+    max-width: 600px;
+}
+
+article p {
+    margin-bottom: 1em;
+}
+.achievements {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-evenly;
+}
+.achievements ul {
+    font-style: italic;
+    list-style-type: square;
+}
+
+.achievements > .section-box {
+    flex: 1;
+}
+
+.section-box {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.achievements li span {
+    font-style:normal;
+}
+.achievements li .success {
+    font-style: normal;
+    color: rgba(87, 77, 22, 0.747);
+    font-weight: bold;
+}
+.achievements li .losses {
+    font-style: normal;
+    color: rgb(117, 48, 36);
+    font-weight: bold;
+}
+.contact {
+    text-align: center;
+}
+section.contact {
+    flex-grow: 1; 
+}
+@media (max-width: 600px) {
+    article {
+        display: block;
+        border: none;
+    }
+
+    .section-box,
+    section.contact,
+    .achievements .section-box {
+        width: 100%;
+        min-width: auto;
+        padding: 20px;
+    }
+
+    .section-box ul,
+    .achievements .section-box ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    article.achievements {
+        display: block;
+    }
+    
+    .achievements .section-box {
+        width: 100%;
+        min-width: auto;
+        border: none;
+        padding: 10px;
+    }
+    
+    .achievements .section-box ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
